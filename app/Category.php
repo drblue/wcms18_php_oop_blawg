@@ -16,6 +16,10 @@ class Category extends Model
         'name',
     ];
 
+    public function categories() {
+        return $this->hasMany(Category::class, 'parent_id');
+    }
+
     public function posts() {
         return $this->hasMany(Post::class);
     }

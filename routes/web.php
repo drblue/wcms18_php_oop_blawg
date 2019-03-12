@@ -22,4 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/countries', 'CountryController@index');
 Route::get('/countries/{country}', 'CountryController@show');
 
+Route::resource('/categories', 'CategoryController');
 Route::resource('/posts', 'PostController');
